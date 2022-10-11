@@ -18,7 +18,7 @@ function Home() {
       <section>
         <h2>Bem Vindo ao SeuCep!</h2>
         <form onSubmit={getCep}>
-          <input type='number' placeholder='Informe o CEP' onChange={(e) => setCep(e.target.value)} required />
+          <input type='text' minLength={8} maxLength={9} placeholder='Informe o CEP' onChange={(e) => setCep(e.target.value)} required />
           <button>Avançar</button>
         </form>
         {error &&
